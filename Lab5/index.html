@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   
+    <ol>
+        <br><img id = "dice1" src="die1.png" alt="blank">
+            <img id = "dice2" src="die1.png" alt="blank">
+            <img id = "dice3" src="die1.png" alt="blank">
+            <img id = "dice4" src="die1.png" alt="blank">
+            <img id = "dice5" src="die1.png" alt="blank">
+            <img id = "dice6" src="die1.png" alt="blank"></br>
+        <br><img id = "dice7" src="die1.png" alt="blank">
+            <img id = "dice8" src="die1.png" alt="blank">
+            <img id = "dice9" src="die1.png" alt="blank">
+            <img id = "dice10" src="die1.png" alt="blank">
+            <img id = "dice11" src="die1.png" alt="blank">
+            <img id = "dice12" src="die1.png" alt="blank"></br>
+    </ol>
+    <form action="#">
+        <input id = "rollButton" type="button" value="Roll Dice">
+    </form>
+    <div id="table"></div>
+    <script>
+        var dice1Img;
+        var dice2Img;
+        var dice3Img;
+        var dice4Img;
+        var dice5Img;
+        var dice6Img;
+        var dice7Img;
+        var dice8Img;
+        var dice9Img;
+        var dice10Img;
+        var dice11Img;
+        var dice12Img;
+        var dienum1 = 0;
+        var dienum2 = 0;
+        var dienum3 = 0;
+        var dienum4 = 0;
+        var dienum5 = 0;
+        var dienum6 = 0;
+        var total = 0;
+        function start(){
+            var button = document.getElementById("rollButton");
+            button.addEventListener("click",rollDice,false);
+            dice1Img = document.getElementById("dice1");
+            dice2Img = document.getElementById("dice2");
+            dice3Img = document.getElementById("dice3");
+            dice4Img = document.getElementById("dice4");
+            dice5Img = document.getElementById("dice5");
+            dice6Img = document.getElementById("dice6");
+            dice7Img = document.getElementById("dice7");
+            dice8Img = document.getElementById("dice8");
+            dice9Img = document.getElementById("dice9");
+            dice10Img = document.getElementById("dice10");
+            dice11Img = document.getElementById("dice11");
+            dice12Img = document.getElementById("dice12");
+        }
+        function setImage(diceImg){
+            var vlue = Math.floor(1+Math.random()*6);
+            tallyRolls(vlue);
+            diceImg.setAttribute("src","die"+vlue+".png");
+            diceImg.setAttribute("alt","dice image with"+vlue+"spot(s)");
+        }
+        function tallyRolls(vlue){
+            if (vlue == 1){
+                dienum1++;
+            }
+            else if (vlue == 2){
+                dienum2++;
+            }
+            else if (vlue == 3){
+                dienum3++;
+            }
+            else if (vlue == 4){
+                dienum4++;
+            }
+            else if (vlue == 5){
+                dienum5++;
+            }
+            else{
+                dienum6++;
+            }
+            total++;
+        }
+        function rollDice(){            
+            setImage(dice1Img);
+            setImage(dice2Img);
+            setImage(dice3Img);
+            setImage(dice4Img);
+            setImage(dice5Img);
+            setImage(dice6Img);
+            setImage(dice7Img);
+            setImage(dice8Img);
+            setImage(dice9Img);
+            setImage(dice10Img);
+            setImage(dice11Img);
+            setImage(dice12Img);
+            updateTable();
+        }   
+        function updateTable(){
+            var numtable = document.getElementById("table");
+            numtable.innerHTML = "<table>"+ 
+                                 "<caption>Dice Rolling Frequencies</caption>"+ 
+                                 "<tr><th>Face</th>"+"<th>Frequency</th>"+"<th>Percent</th></tr>"+                                                               
+                                 "<tr><td>1</td>"+"<td>"+dienum1+"</td>"+"<td>"+Math.floor((dienum1/total)*100)+"%</td>"+"</tr>"+
+                                 "<tr><td>2</td>"+"<td>"+dienum2+"</td>"+"<td>"+Math.floor((dienum2/total)*100)+"%</td>"+"</tr>"+
+                                 "<tr><td>3</td>"+"<td>"+dienum3+"</td>"+"<td>"+Math.floor((dienum3/total)*100)+"%</td>"+"</tr>"+
+                                 "<tr><td>4</td>"+"<td>"+dienum4+"</td>"+"<td>"+Math.floor((dienum4/total)*100)+"%</td>"+"</tr>"+
+                                 "<tr><td>5</td>"+"<td>"+dienum5+"</td>"+"<td>"+Math.floor((dienum5/total)*100)+"%</td>"+"</tr>"+
+                                 "<tr><td>6</td>"+"<td>"+dienum6+"</td>"+"<td>"+Math.floor((dienum6/total)*100)+"%</td>"+"</tr>"
+                                 "</table>"
+        }    
+        window.addEventListener("load",start,false);
+    </script>
+</body>
+</html>
