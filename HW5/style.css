@@ -1,0 +1,17 @@
+#block{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(228, 228, 228, 0.929);
+    text-align: center;
+}
+.head{
+    font-size: xx-large;
+}
+.inputbox{
+    background-color: white;width: 80%;height: 50%;
+}
+#operate{
+    width: 80%;
+}
+.calbutton{
+    background-color: rgb(145, 68, 68);color: rgb(252, 251, 251);width: 80%;
+}

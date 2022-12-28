@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>html hw</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div id="block">
+    <h2 class="head">JS Calculator</h2>
+    <form>
+        <p><label>Number 1</label></p>
+        <p><input type="number" id="num1id" class="inputbox"></p>
+        <p><label>Number 2</label></p>
+        <p><input type="number" id="num2id" class="inputbox"></p>
+        <p><label>Operate way?</label></p>
+        <p><select id="operate" name="method">
+            <option value="0">+</option>
+            <option value="1">-</option>
+            <option value="2">*</option>
+            <option value="3">/</option>
+        </select></p>
+    </form>
+    <input type="button" value="Count" class="calbutton" onclick="calculate()">
+    <p>Result = <span id="result"></span></p>
+    </div>
+	<script type="text/javascript">
+        function minus(num1,num2){
+            return num1-num2;
+        }
+		function calculate(){
+            var num1 = parseInt(document.getElementById('num1id').value);
+            var num2 = parseInt(document.getElementById('num2id').value);
+            var operator = parseInt(document.getElementById('operate').value);
+            if(operator == 0){
+                document.getElementById('result').innerHTML = num1+num2;
+            }
+            if(operator == 1){
+                document.getElementById('result').innerHTML = minus(num1,num2);
+            }
+            if(operator == 2){
+                document.getElementById('result').innerHTML = num1*num2;
+            }
+            if(operator == 3){
+                document.getElementById('result').innerHTML = num1/num2;
+            }
+        } 
+	</script>	
+
+</body>
+</html>
