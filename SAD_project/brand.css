@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.fontRegular{
+    font-family: "amatic-sc", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.fontBold{
+    font-family: "amatic-sc", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.rectangle{
+    display: flex;
+    /*position: fixed;*/
+    width: 100%;   
+    
+    padding:0% 3%;
+    margin-left: 0px;
+}
+#rectTopic{
+    height: 20%;
+    background-color: #F0EAD6;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+#rectInfo{
+    height: 25%;
+    background-color: #ffffff;
+    width: 95%;
+    margin-top: 3%;
+    opacity: 0.8;
+    border-color: #43c27a;
+    border-width: 3px;
+    border-style: solid;
+    /*margin-top: 15%;*/
+    position: relative;/*rectTitle設relative 而此處設absolute可讓此長方形貼齊rectTitle*/
+    /*z-index: 5;*/
+}
+#circle{
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background-image: url(userIcon75.jpg);
+    margin-left: 65%;
+    margin-top: 3%;
+    border-color: transparent;
+    transition-duration: 5ms;
+    transition-timing-function: ease;
+    background-position: center;
+}
+#topicPic{
+    width: 350px;
+    height: 136px;
+    margin-top: 1%;
+}
+.btnAspect{
+    border-radius: 10%;
+    border-color: #AD9989;
+    color: #AD9989;
+    border-width: 3px;
+    margin-left: 90%;
+    margin-top: 12%;
+    width: 130px;
+    height: 45px;
+    font-size: xx-large;
+    padding-left: 3px;
+    /*position: absolute;*/
+    /*z-index: 5;*/
+}
+.optAspect{
+    background-color: #FDF5E6;
+    color: #AD9989;
+    font-size: xx-large;
+}
+#circle:hover{
+    transform: scale(1.1);
+}
+.contentTitle{
+    font-size: 50px;
+    /*margin-top: 60%;*/
+    color: #6d7470;
+    margin-left: 3%;
+    /*z-index: 5;*/
+}
+#titleFirst{
+    margin-left: 70px;
+    margin-top: 40%;
+    position: relative;
+}
+#titleSecond{
+    margin-left: 25%;
+    position: absolute;
+}
+#titleThird{
+    margin-left: 700px;
+    position: absolute;
+    margin-left: 60%;
+}
+.contentRect{
+    margin-left: 15%;
+    margin-right: 5%;
+    font-size: 40px;
+    color: #97a29c;
+    width: 80%;
+    height: 70px;
+    border-radius: 10%;
+    padding-left: 20px;
+    padding-top: 28px;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(206, 206, 206, 0.1);
+    transition: box-shadow 0.3s ease;
+    /*z-index: 5;*/
+}
+.btnUpload{
+    border-radius: 10%;
+    border-color: #AD9989;
+    color: #AD9989;
+    border-width: 3px;
+    padding-left: 3px;
+    padding-top: 3px;
+    width: 70px;
+    height: 35px;
+    font-size: x-large;
+}
+.contentSecond{
+    margin-left: 35%;
+}
+.contentThird{
+    margin-left: 23%;
+}
+.contentRect:hover{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);
+}
+.finish{
+    color: #43c27a;
+}
+.problem{
+    color: #bc1b1b;
+    font-weight: 900;
+}
