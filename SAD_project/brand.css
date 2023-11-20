@@ -1,6 +1,8 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: 0;    
+    height: auto;
+    width:1450px;
 }
 .fontRegular{
     font-family: "amatic-sc", sans-serif;
@@ -14,9 +16,7 @@ body {
 }
 .rectangle{
     display: flex;
-    /*position: fixed;*/
     width: 100%;   
-    
     padding:0% 3%;
     margin-left: 0px;
 }
@@ -34,7 +34,6 @@ body {
     margin-top: 3%;
     opacity: 0.8;
     border-bottom: 1px solid #b6c4bc;
-    /*margin-top: 15%;*/
     position: relative;/*rectTitle設relative 而此處設absolute可讓此長方形貼齊rectTitle*/
 }
 #circle{
@@ -65,7 +64,6 @@ body {
     height: 45px;
     font-size: xx-large;
     padding-left: 3px;
-    /*position: absolute;*/
 }
 .optAspect{
     background-color: #FDF5E6;
@@ -77,7 +75,6 @@ body {
 }
 .contentTitle{
     font-size: 50px;
-    /*margin-top: 60%;*/
     color: #6d7470;
     margin-left: 3%;
 }
