@@ -33,12 +33,9 @@ body {
     width: 95%;
     margin-top: 3%;
     opacity: 0.8;
-    border-color: #43c27a;
-    border-width: 3px;
-    border-style: solid;
+    border-bottom: 1px solid #b6c4bc;
     /*margin-top: 15%;*/
     position: relative;/*rectTitle設relative 而此處設absolute可讓此長方形貼齊rectTitle*/
-    /*z-index: 5;*/
 }
 #circle{
     width: 74px;
@@ -69,7 +66,6 @@ body {
     font-size: xx-large;
     padding-left: 3px;
     /*position: absolute;*/
-    /*z-index: 5;*/
 }
 .optAspect{
     background-color: #FDF5E6;
@@ -84,21 +80,20 @@ body {
     /*margin-top: 60%;*/
     color: #6d7470;
     margin-left: 3%;
-    /*z-index: 5;*/
 }
 #titleFirst{
-    margin-left: 70px;
+    margin-left: 150px;
     margin-top: 40%;
     position: relative;
 }
 #titleSecond{
-    margin-left: 25%;
+    margin-left: 23%;
     position: absolute;
 }
 #titleThird{
     margin-left: 700px;
     position: absolute;
-    margin-left: 60%;
+    margin-left: 48%;
 }
 .contentRect{
     margin-left: 15%;
@@ -113,7 +108,6 @@ body {
     align-items: center;
     box-shadow: 0px 0px 10px rgba(206, 206, 206, 0.1);
     transition: box-shadow 0.3s ease;
-    /*z-index: 5;*/
 }
 .btnUpload{
     border-radius: 10%;
@@ -142,4 +136,8 @@ body {
 .problem{
     color: #bc1b1b;
     font-weight: 900;
+}
+.btnUpload:hover{
+    font-weight: 900;
+    background-color: #ffffff;
 }
